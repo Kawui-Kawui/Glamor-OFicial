@@ -30,8 +30,8 @@ public class MesacrafteopruebaScreen extends AbstractContainerScreen<Mesacrafteo
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 180;
+		this.imageHeight = 214;
 	}
 
 	private static final ResourceLocation texture = new ResourceLocation("prueba_bma:textures/mesacrafteoprueba.png");
@@ -52,7 +52,7 @@ public class MesacrafteopruebaScreen extends AbstractContainerScreen<Mesacrafteo
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("prueba_bma:textures/ha.png"));
-		this.blit(ms, this.leftPos + 113, this.topPos + 31, 0, 0, 16, 16, 16, 16);
+		this.blit(ms, this.leftPos + 116, this.topPos + 36, 0, 0, 16, 16, 16, 16);
 
 		RenderSystem.disableBlend();
 	}
@@ -85,7 +85,7 @@ public class MesacrafteopruebaScreen extends AbstractContainerScreen<Mesacrafteo
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		this.addRenderableWidget(new Button(this.leftPos + 114, this.topPos + 49, 56, 20, new TextComponent("Forjar"), e -> {
+		this.addRenderableWidget(new Button(this.leftPos + 117, this.topPos + 74, 56, 20, new TextComponent("Forjar"), e -> {
 			if (true) {
 				PruebaBmaMod.PACKET_HANDLER.sendToServer(new MesacrafteopruebaButtonMessage(0, x, y, z));
 				MesacrafteopruebaButtonMessage.handleButtonAction(entity, 0, x, y, z);

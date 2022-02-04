@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "gladimite_block",
-    "textureTop": "",
+    "textureTop": "mesaporarriba",
     "textureLeft": "gladimite_block",
     "textureFront": "anvil_mesa_textura_frente",
     "textureRight": "",
